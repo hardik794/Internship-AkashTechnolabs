@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-2" style="width: 60%;">
+        <form class="needs-validation p-3" action="" method="POST" style="border: 2px solid red;border-radius: 10px;">
+            {% csrf_token %}
+            <div align="center">
+                <h3>Registration Form</h3>
+            </div>
+            <hr>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip01">First name</label>
+                    <input type="text" class="form-control" id="validationTooltip01" name="fn" placeholder="First name"
+                        required>
+                    <div class="valid-tooltip">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip02">Last name</label>
+                    <input type="text" class="form-control" id="validationTooltip02" name="ln" placeholder="Last name" required>
+                    <div class="valid-tooltip">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltipUsername">Email</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" id="validationTooltipUsername"
+                            placeholder="Enter Email" aria-describedby="validationTooltipUsernamePrepend" name="email"
+                            required>
+                        <div class="invalid-tooltip">
+                            Please choose a unique and valid email
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Contact</label>
+                    <input type="text" class="form-control" id="validationTooltip03" placeholder="Phone Number"
+                        name="contact" required>
+                    <div class="invalid-tooltip">
+                        Please provide a valid Contact Number
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                
+                <div id="date-picker-example"
+                    class="col-md-12 mb-3 md-form md-outline input-with-post-icon datepicker">
+                    <label for="inputAddress">Address</label>
+                    <textarea type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address" required></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+             <div class="col-md-6 mb-3">
+                    <label for="inputState">Gender</label>
+                    <select id="inputState" class="form-control" name="gender">
+                        <option selected>Choose...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div> 
+                 <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Birth Date</label>
+                    <input type="date" class="form-control" id="validationTooltip03" placeholder="Birth Date"
+                        name="date" required>
+                    <div class="invalid-tooltip">
+                        Please provide a Birth Date
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">College Name</label>
+                    <input type="text" class="form-control" id="validationTooltip03" placeholder="College Name"
+                        name="college" required>
+                    <div class="invalid-tooltip">
+                        Please provide a valid Contact Number
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="inputState">Department</label>
+                    <select id="inputState" class="form-control" name="dept">
+                        <option selected>Choose...</option>
+                        <option value="Information Technology">IT</option>
+                        <option value="Computer">Computer</option>
+                        <option value="Michenical">Michenical</option>
+                        <option vallue="Electrical">Electrical</option>
+                        <option value="Environmental">Environmental</option>
+                        <option value="Civil">Civil</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-danger" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
