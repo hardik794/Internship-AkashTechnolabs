@@ -1,0 +1,18 @@
+<h1>Student Data</h1>
+<table border="1px">
+<tr>
+<td>First_Name</td>
+<td>Last_Name</td>
+<td>Email</td>
+<td>Enrollment</td>
+</tr>
+{% for data in object_list %}
+<tr>
+<td>{{data.first_name}}</td>
+<td>{{data.last_name}}</td>
+<td>{{data.Email}}</td>
+<td>{{data.enrollment_num}}</td>
+</tr>
+{% endfor %}
+
+</table>
